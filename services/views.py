@@ -14,9 +14,6 @@ def index(request):
 	return HttpResponse(template.render(context,request))
 
 def detail(request, service_id):
-	# return HttpResponse("Here is information on this service")
-
-
 	service = get_object_or_404(Services, pk=service_id)
 	return render(request, 'services/detail.html', {'service': service})
 
