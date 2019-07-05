@@ -11,7 +11,7 @@ from django.utils import timezone
 
 #  MODELS
 
-class Service(models.Model):
+class Services(models.Model):
 	title = models.CharField(max_length=100)
 	description = models.CharField(max_length=1000)
 	# pub_date = models.DateTimeField('date published')
