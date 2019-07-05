@@ -5,4 +5,12 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("Welcome. What services would you like to view?")
+
+
+def recent(request):
+	return HttpResponse("Here are the most recently-added services")
+
+def location(request):
+	return HttpResponse("Here are the services closest to you")
+
