@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.template import loader
 from .models import Services
@@ -13,7 +13,12 @@ def index(request):
 	}
 	return HttpResponse(template.render(context,request))
 
-    # return HttpResponse("Welcome. What services would you like to view?")
+def detail(request, service_id):
+	# return HttpResponse("Here is information on this service")
+
+
+	service = get_object_or_404(Services, pk=service_id)
+	return render(request, 'services/detail.html', {'service': service})
 
 
 def recent(request):

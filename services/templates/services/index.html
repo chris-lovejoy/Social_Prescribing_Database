@@ -3,7 +3,7 @@
 <ul>
 
 {% for services in services.all %}
-	<li><a href= "/services/{{services.id }}/"> {{ services.title }} </a></li>
+	<li><a href="{% url 'detail' services.id %}"> {{ services.title }} </a></li>
 {% endfor %}
 
 </ul>
