@@ -1,0 +1,10 @@
+<h1>"Welcome. What service would you like to know more about?"</h1>
+
+<ul>
+
+{% for services in services.all %}
+	<li><a href= "/services/{{services.id }}/"> {{ services.title }} </a></li>
+{% endfor %}
+
+</ul>
+

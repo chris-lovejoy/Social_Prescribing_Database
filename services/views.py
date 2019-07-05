@@ -1,11 +1,19 @@
 from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
+from django.template import loader
+from .models import Services
+
 
 
 def index(request):
-    return HttpResponse("Welcome. What services would you like to view?")
+	services = Services.objects.all()
+	template = loader.get_template('services/index.html')
+	context = {
+		'services': services,
+	}
+	return HttpResponse(template.render(context,request))
+
+    # return HttpResponse("Welcome. What services would you like to view?")
 
 
 def recent(request):
