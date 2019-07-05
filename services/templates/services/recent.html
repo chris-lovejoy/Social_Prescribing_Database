@@ -1,0 +1,9 @@
+<h1>Here are the 5 most recent services</h1>
+
+<ul>
+
+{% for latest_services in latest_services.all %}
+	<li> {{ latest_services.title }} </a></li>
+{% endfor %}
+
+</ul>

@@ -19,8 +19,13 @@ def detail(request, service_id):
 
 
 def recent(request):
-	return HttpResponse("Here are the most recently-added services")
+	latest_services = Services.objects.order_by('-pub_date')[:5]
+	return render(request, 'services/recent.html', {'latest_services': latest_services})
+
+	# output = ', '.join([q.title for q in latest_services])
+	# return HttpResponse(output)
+
 
 def location(request):
-	return HttpResponse("Here are the services closest to you")
+	return HttpResponse("Here are the services closest to you... wait, actually we don't know how to do that yet.")
 
