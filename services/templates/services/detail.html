@@ -2,17 +2,27 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'services/detail.css' %}">
 
-
 <div id="content">
-	<div id="title">
-	<p>{{ service.description }}</p>
-	</div>
-
-	<div id="subtitle">
-	<p>Website: {{service.website }}</p>
-	</div>
-	
 </div>
+
+
+	
+	<p id="title">{{ service.description }}</p>
+	
+	
+	<p id="subtitle">Here is where a description of the service will appear. It could be pretty long - perhaps as many as 1,000 words. Actually, on reflection, that would probably be too long. Better set a limit as to the length people can describe their services.</p>
+	
+
+		<ul>
+			
+			<li id="li1">Website: {{service.website }}</li>
+			
+			<li id ="li2">Test</li>
+			<li id = "li3">Testing 2</li>
+			
+
+		</ul>
+
 
 <div id="media">
 
@@ -21,4 +31,5 @@
 	<img src="{{service.image_url}}">
 
 </div>
+
 
