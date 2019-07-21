@@ -1,0 +1,73 @@
+
+
+
+body {
+background: #4cd0b2;
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+}
+/* Change colour back to F2F2F2 after testing*/
+
+
+#content {
+background:#bc8f8f;
+position: absolute;
+left: 13.89%;
+right: 54.38%;
+top: 23.83%;
+bottom: 23.67%;
+}
+
+
+#media {
+position: absolute;
+left: 53.4%;
+right: 13.26%;
+top: 20%;
+bottom: 20%;
+
+background: #30544a;
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 8px;
+}
+
+
+/* Subtitle */
+#subtitle {
+position: absolute;
+left: 16.32%;
+right: 54.38%;
+top: 32.67%;
+bottom: 53.17%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+
+color: #000000;
+}
+
+
+/* Title */
+#title {
+position: absolute;
+left: 16.11%;
+right: 69.17%;
+top: 23.83%;
+bottom: 71.33%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height */
+
+color: #000000;
+}

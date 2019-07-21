@@ -1,7 +1,24 @@
-<h1>{{ service }}</h1>
+{% load static %}
 
-<p>{{ service.description }}</p>
+<link rel="stylesheet" type="text/css" href="{% static 'services/detail.css' %}">
 
-<p>Website: {{service.website }}</p>
 
-<img src="{{service.image_url}}">
+<div id="content">
+	<div id="title">
+	<p>{{ service.description }}</p>
+	</div>
+
+	<div id="subtitle">
+	<p>Website: {{service.website }}</p>
+	</div>
+	
+</div>
+
+<div id="media">
+
+	<p>media will appear here:</p>
+
+	<img src="{{service.image_url}}">
+
+</div>
+
