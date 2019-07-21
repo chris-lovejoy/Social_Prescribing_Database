@@ -1,17 +1,20 @@
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'services/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'services/index.css' %}">
+
+	<div id="content">
+	<p>Do you want to view your <a href="{% url 'location' %}">local resources</a>? 
+	<br>
+	Or those <a href="{% url 'recent' %}">recently added</a> to the site?</p>
 
 
-<h1>Do you want to view your <a href="{% url 'location' %}">local resources</a>? Or those <a href="{% url 'recent' %}">recently added</a> to the site?</h1>
+	<p>Alternatively, here is a list of all services. Which service would you like to know more about?</p>
+	
+	<ul>
 
+	{% for services in services.all %}
+		<li><a href="{% url 'detail' services.id %}"> {{ services.title }} </a></li>
+	{% endfor %}
 
-<h1>Alternatively, here is a list of all services. Which service would you like to know more about?</h1>
-
-<ul>
-
-{% for services in services.all %}
-	<li><a href="{% url 'detail' services.id %}"> {{ services.title }} </a></li>
-{% endfor %}
-
-</ul>
+	</ul>
+	</div>
