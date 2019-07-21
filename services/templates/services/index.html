@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'services/style.css' %}">
+
 
 <h1>Do you want to view your <a href="{% url 'location' %}">local resources</a>? Or those <a href="{% url 'recent' %}">recently added</a> to the site?</h1>
 
@@ -9,5 +13,7 @@
 {% for services in services.all %}
 	<li><a href="{% url 'detail' services.id %}"> {{ services.title }} </a></li>
 {% endfor %}
+
+<li> Testing </li>
 
 </ul>
