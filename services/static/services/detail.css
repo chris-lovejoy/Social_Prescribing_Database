@@ -9,7 +9,6 @@ right: 0%;
 top: 0%;
 bottom: 0%;
 }
-/* Change colour back to F2F2F2 after testing*/
 
 
 #content {
@@ -18,7 +17,6 @@ position: absolute;
 left: 13.89%;
 right: 54.38%;
 top: 23.83%;
-bottom: 23.67%;
 }
 
 
@@ -45,6 +43,31 @@ border-radius: 8px;
 }
 
 
+#service-title {
+font-family: Helvetica;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 34px;
+
+color: #000000;
+}
+
+
+#service-description {
+font-family: Helvetica;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+
+color: #000000;
+}
+
+
+p {
+font-family: Helvetica;
+}
 
 
 #title {

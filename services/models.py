@@ -18,6 +18,7 @@ class Services(models.Model):
 	email = models.CharField(max_length=40, null=True)
 	website = models.CharField(max_length = 50, null=True)
 	image_url = models.CharField(max_length = 250, default="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg")
+	image = models.ImageField(upload_to='service_images', default="service_images/no_image.svg")
 	referral_route = models.CharField(max_length = 200)
 	pub_date = models.DateTimeField('date published')
 	# exp_date = models.DateTimeField('date expired')
