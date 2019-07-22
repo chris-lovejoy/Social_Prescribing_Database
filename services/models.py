@@ -12,7 +12,7 @@ from django.utils import timezone
 #  MODELS
 
 class Services(models.Model):
-	title = models.CharField(max_length=50)
+	title = models.CharField(max_length=100)
 	description = models.CharField(max_length=1000)
 	telephone = models.CharField(max_length=15, null=True)
 	email = models.CharField(max_length=40, null=True)
