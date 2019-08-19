@@ -1,0 +1,26 @@
+{% extends 'table/base.html' %}
+{% block body %}
+    <table id = "table" class = "table table-bordered">
+        <thead class = "alert-success">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in all_members %}
+            <tr>
+                <td>{{ member.firstname }}</td>
+                <td>{{ member.lastname }}</td>
+                <td>{{ member.age }}</td>
+                <td>{{ member.email }}</td>
+                <td>{{ member.address }}</td>
+            </tr>
+           {% endfor %}
+        </tbody>
+    </table>
+ 
+{% endblock %}
