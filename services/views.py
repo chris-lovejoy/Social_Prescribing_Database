@@ -25,13 +25,20 @@ def recent(request):
 	# output = ', '.join([q.title for q in latest_services])
 	# return HttpResponse(output)
 
-def detail_2(request):
-	context = {
-		
-	}
-	return render(request, 'services/detail_2.html', context)
-
-
 def location(request):
 	return HttpResponse("Here are the services closest to you... wait, actually we don't know how to do that yet.")
+
+def detail_2(request):
+	return render(request, 'services/detail_2.html')
+
+
+# def search(request, search_term):
+
+# 	template_name = 'search_test.html'
+
+# 	query = request.GET.get('q', '')
+# 	if query:		
+# Writing GET request - TO DO
+
+
 
